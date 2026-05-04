@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>North Wolf Ice & Refrigeration | The Woodlands, TX</title>
-<meta name="description" content="The Woodlands' premier ice machine repair & maintenance specialist. Same-day commercial service. All major brands. Licensed & insured. Call Us.">
+<meta name="description" content="The Woodlands' premier ice machine repair & maintenance specialist. Same-day commercial service. All major brands. Licensed & insured. Call Now.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -173,7 +173,9 @@
     position: relative;
     overflow: hidden;
     min-height: 600px;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 48px;
     align-items: center;
   }
   .hero-bg { position: absolute; inset: 0; pointer-events: none; }
@@ -277,6 +279,34 @@
   .trust-item { display: flex; align-items: center; gap: 8px; }
   .trust-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--ice); flex-shrink: 0; }
   .trust-text { font-size: 11px; color: #4A7A9B; letter-spacing: 0.04em; }
+
+  .hero-services {
+    position: relative; z-index: 2;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+    opacity: 0; animation: fadeUp 0.6s ease 0.6s forwards;
+  }
+  .hero-svc-card {
+    background: rgba(15, 38, 64, 0.7);
+    border: 1px solid var(--steel-dk);
+    backdrop-filter: blur(8px);
+    border-radius: 8px; padding: 20px;
+    transition: transform 0.2s, border-color 0.2s;
+  }
+  .hero-svc-card:hover { transform: translateY(-4px); border-color: var(--ice); }
+  .hero-svc-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 16px; font-weight: 700; text-transform: uppercase;
+    color: var(--white); margin-bottom: 8px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .hero-svc-icon {
+    width: 28px; height: 28px;
+    background: rgba(91,184,245,0.15); border-radius: 6px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--ice); flex-shrink: 0;
+  }
+  .hero-svc-icon svg { width: 16px; height: 16px; stroke: currentColor; }
+  .hero-svc-desc { font-size: 12px; color: var(--frost); line-height: 1.5; }
 
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(20px); }
@@ -500,7 +530,7 @@
     text-transform: uppercase; letter-spacing: 0.04em;
     color: var(--navy); margin-bottom: 8px;
   }
-  .step-desc { font-size: 12px; color: var(--frost); line-height: 1.5; }
+  .step-desc { font-size: 12px; color: var(--frost); line-height: 1.5; text-align: justify; }
 
   /* ── BRANDS ─────────────────────────────────────────────────────── */
   .brands {
@@ -870,9 +900,10 @@
     .hamburger { display: flex; }
 
     /* Hero */
-    .hero { padding: 100px 24px 60px; min-height: auto; }
+    .hero { padding: 100px 24px 60px; min-height: auto; grid-template-columns: 1fr; gap: 48px; }
     .hero-h1 { font-size: 58px; }
     .hero-sub { font-size: 15px; max-width: 100%; }
+    .hero-services { grid-template-columns: 1fr; }
     .hero-actions { flex-direction: column; align-items: stretch; }
     .hero-actions .btn-primary,
     .hero-actions .btn-secondary {
@@ -959,12 +990,12 @@
   <a class="nav-brand" href="#">
     <div class="nav-icon">
       <svg viewBox="0 0 36 36" fill="none">
-        <circle cx="18" cy="18" r="12" stroke="#5BB8F5" stroke-width="1.5"/>
-        <circle cx="18" cy="18" r="4" fill="#5BB8F5"/>
-        <line x1="18" y1="6"  x2="18" y2="11" stroke="#5BB8F5" stroke-width="1.2" stroke-linecap="round"/>
-        <line x1="18" y1="25" x2="18" y2="30" stroke="#5BB8F5" stroke-width="1.2" stroke-linecap="round"/>
-        <line x1="6"  y1="18" x2="11" y2="18" stroke="#5BB8F5" stroke-width="1.2" stroke-linecap="round"/>
-        <line x1="25" y1="18" x2="30" y2="18" stroke="#5BB8F5" stroke-width="1.2" stroke-linecap="round"/>
+        <circle cx="18" cy="18" r="16" stroke="#5BB8F5" stroke-width="1.5"/>
+        <circle cx="18" cy="18" r="5" fill="#5BB8F5"/>
+        <line x1="18" y1="2"  x2="18" y2="8" stroke="#5BB8F5" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="18" y1="28" x2="18" y2="34" stroke="#5BB8F5" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="2"  y1="18" x2="8" y2="18" stroke="#5BB8F5" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="28" y1="18" x2="34" y2="18" stroke="#5BB8F5" stroke-width="1.5" stroke-linecap="round"/>
       </svg>
     </div>
     <div>
@@ -984,7 +1015,7 @@
       <svg width="13" height="13" viewBox="0 0 20 20" fill="none">
         <path d="M3 3h4l2 5-2.5 1.5a11 11 0 005 5L13 12l5 2v4a2 2 0 01-2 2C6 20 0 14 0 5a2 2 0 012-2h1z" fill="#5BB8F5"/>
       </svg>
-      Call Us
+      Call Now
     </a>
     <a class="nav-cta" href="#quote">Get a Quote</a>
     <button class="hamburger" id="hamburger" aria-label="Open menu">
@@ -1004,7 +1035,7 @@
     <svg width="14" height="14" viewBox="0 0 20 20" fill="none">
       <path d="M3 3h4l2 5-2.5 1.5a11 11 0 005 5L13 12l5 2v4a2 2 0 01-2 2C6 20 0 14 0 5a2 2 0 012-2h1z" fill="#5BB8F5"/>
     </svg>
-    Call Us
+    Call Now
   </a>
   <a href="#quote" class="mobile-menu-cta">Get a Free Quote</a>
 </div>
@@ -1023,7 +1054,7 @@
   </svg>
   <div class="hero-content">
     <div class="hero-eyebrow">The Woodlands, TX &nbsp;·&nbsp; Serving Restaurants, Hotels &amp; Businesses</div>
-    <h1 class="hero-h1">Ice Machine<span>Experts.</span></h1>
+    <h1 class="hero-h1">Ice Machine<span>Repair Experts.</span></h1>
     <p class="hero-sub">Fast, reliable ice machine repair and maintenance for commercial accounts. All major brands. Licensed &amp; insured.</p>
     <div class="hero-urgency">
       <div class="urgency-dot"></div>
@@ -1034,8 +1065,8 @@
       <span class="rating-text"><strong>5.0 Google Rating</strong> · Based on 120+ reviews</span>
     </div>
     <div class="hero-actions">
-      <a class="btn-primary" href="#quote">Get a Free Quote</a>
-      <a class="btn-secondary" href="tel:+12819397182">Call Us</a>
+      <a class="btn-primary" style="background:var(--success);color:var(--white);" href="tel:+12819397182">Call Now</a>
+      <a class="btn-secondary" href="#quote">Get a Free Quote</a>
     </div>
     <div class="hero-trust">
       <div class="trust-item"><div class="trust-dot"></div><span class="trust-text">Licensed &amp; Insured</span></div>
@@ -1044,78 +1075,55 @@
       <div class="trust-item"><div class="trust-dot"></div><span class="trust-text">All Major Brands</span></div>
     </div>
   </div>
+  <div class="hero-services" id="services">
+    <div class="hero-svc-card">
+      <div class="hero-svc-title">
+        <div class="hero-svc-icon">
+          <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke-width="1.4"/><path d="M10 6v4.5l2.5 2" stroke-width="1.4" stroke-linecap="round"/></svg>
+        </div>
+        Emergency Repair
+      </div>
+      <div class="hero-svc-desc">Machine down? We respond within 4 hours. Diagnosed and repaired on-site.</div>
+    </div>
+    <div class="hero-svc-card">
+      <div class="hero-svc-title">
+        <div class="hero-svc-icon">
+          <svg viewBox="0 0 20 20" fill="none"><path d="M3 15L7 9l4 3 4-7 3 3" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        Preventive Maintenance
+      </div>
+      <div class="hero-svc-desc">Scheduled Preventive Maintenance visits and filter changes. Stop breakdowns before they happen.</div>
+    </div>
+    <div class="hero-svc-card">
+      <div class="hero-svc-title">
+        <div class="hero-svc-icon">
+          <svg viewBox="0 0 20 20" fill="none"><rect x="3" y="6" width="14" height="10" rx="1.5" stroke-width="1.4"/><path d="M7 6V5a3 3 0 016 0v1" stroke-width="1.4" stroke-linecap="round"/><path d="M8 12l2 2 3-4" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        Deep Clean &amp; Sanitize
+      </div>
+      <div class="hero-svc-desc">NSF-approved sanitization with ice quality certification for compliance.</div>
+    </div>
+    <div class="hero-svc-card">
+      <div class="hero-svc-title">
+        <div class="hero-svc-icon">
+          <svg viewBox="0 0 20 20" fill="none"><rect x="3" y="4" width="14" height="12" rx="1.5" stroke-width="1.4"/><path d="M3 8h14" stroke-width="1.4"/><path d="M7 12h2M11 12h2" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </div>
+        Maintenance Contracts
+      </div>
+      <div class="hero-svc-desc">Monthly plans with priority response, scheduled visits, and repair discounts.</div>
+    </div>
+  </div>
 </section>
 
 <!-- STATS BAR -->
-<div class="stats-bar">
-  <div class="stat-item"><div class="stat-n">500+</div><div class="stat-l">Machines Serviced</div></div>
-  <div class="stat-item"><div class="stat-n">4hr</div><div class="stat-l">Avg. Response Time</div></div>
-  <div class="stat-item"><div class="stat-n">98%</div><div class="stat-l">Same-Visit Fix Rate</div></div>
-  <div class="stat-item"><div class="stat-n">5★</div><div class="stat-l">Google Rating</div></div>
+<div class="stats-bar" id="statsBar">
+  <div class="stat-item"><div class="stat-n"><span class="odometer" data-target="500">0</span>+</div><div class="stat-l">Machines Serviced</div></div>
+  <div class="stat-item"><div class="stat-n"><span class="odometer" data-target="4">0</span>hr</div><div class="stat-l">Avg. Response Time</div></div>
+  <div class="stat-item"><div class="stat-n"><span class="odometer" data-target="98">0</span>%</div><div class="stat-l">Same-Visit Fix Rate</div></div>
+  <div class="stat-item"><div class="stat-n"><span class="odometer" data-target="5">0</span>★</div><div class="stat-l">Google Rating</div></div>
 </div>
 
-<!-- SERVICES -->
-<section class="section services" id="services">
-  <div class="section-eyebrow">What We Do</div>
-  <div class="section-title">Our Services</div>
-  <div class="svc-grid">
-
-    <div class="svc-card featured">
-      <div class="svc-icon-wrap">
-        <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#185FA5" stroke-width="1.4"/><path d="M10 6v4.5l2.5 2" stroke="#185FA5" stroke-width="1.4" stroke-linecap="round"/></svg>
-      </div>
-      <div class="svc-card-title">Emergency Repair</div>
-      <div class="svc-card-desc">Machine down? We respond within 4 hours for commercial accounts. All major brands diagnosed and repaired on-site. Diagnostic fee waived with repair.</div>
-      <div class="svc-card-price">From $85 <span>/ diagnostic</span></div>
-    </div>
-
-    <div class="svc-card">
-      <div class="svc-icon-wrap">
-        <svg viewBox="0 0 20 20" fill="none"><path d="M3 15L7 9l4 3 4-7 3 3" stroke="#185FA5" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </div>
-      <div class="svc-card-title">Preventive Maintenance</div>
-      <div class="svc-card-desc">Scheduled PM visits, filter changes, sanitization, and ice quality certification letters. Stop breakdowns before they happen.</div>
-      <div class="svc-card-price">From $120 <span>/ visit</span></div>
-    </div>
-
-    <div class="svc-card">
-      <div class="svc-icon-wrap">
-        <svg viewBox="0 0 20 20" fill="none"><rect x="3" y="6" width="14" height="10" rx="1.5" stroke="#185FA5" stroke-width="1.4"/><path d="M7 6V5a3 3 0 016 0v1" stroke="#185FA5" stroke-width="1.4" stroke-linecap="round"/><path d="M8 12l2 2 3-4" stroke="#185FA5" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </div>
-      <div class="svc-card-title">Deep Clean &amp; Sanitize</div>
-      <div class="svc-card-desc">NSF-approved sanitization with ice quality certification for health department compliance. Protect your business and your customers.</div>
-      <div class="svc-card-price">From $110 <span>/ unit</span></div>
-    </div>
-
-    <div class="svc-card">
-      <div class="svc-icon-wrap">
-        <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="3" stroke="#185FA5" stroke-width="1.4"/><path d="M10 3v2M10 15v2M3 10h2M15 10h2" stroke="#185FA5" stroke-width="1.4" stroke-linecap="round"/></svg>
-      </div>
-      <div class="svc-card-title">Refrigerant Services</div>
-      <div class="svc-card-desc">EPA 608 certified leak detection, repair, and refrigerant recharge. R-404A &amp; R-448A. Fully compliant, fully documented.</div>
-      <div class="svc-card-price">From $350 <span>/ service</span></div>
-    </div>
-
-    <div class="svc-card">
-      <div class="svc-icon-wrap">
-        <svg viewBox="0 0 20 20" fill="none"><path d="M4 17V10l6-6 6 6v7" stroke="#185FA5" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><rect x="8" y="12" width="4" height="5" stroke="#185FA5" stroke-width="1.2"/></svg>
-      </div>
-      <div class="svc-card-title">Installation</div>
-      <div class="svc-card-desc">New unit commissioning, plumbing hookup, startup testing and calibration on all brands. Done right from day one.</div>
-      <div class="svc-card-price">From $225 <span>/ unit</span></div>
-    </div>
-
-    <div class="svc-card">
-      <div class="svc-icon-wrap">
-        <svg viewBox="0 0 20 20" fill="none"><rect x="3" y="4" width="14" height="12" rx="1.5" stroke="#185FA5" stroke-width="1.4"/><path d="M3 8h14" stroke="#185FA5" stroke-width="1.4"/><path d="M7 12h2M11 12h2" stroke="#185FA5" stroke-width="1.8" stroke-linecap="round"/></svg>
-      </div>
-      <div class="svc-card-title">Maintenance Contracts</div>
-      <div class="svc-card-desc">Monthly plans with priority response, scheduled PM visits, and repair discounts. Set it and forget it — we handle the rest.</div>
-      <div class="svc-card-price">From $99 <span>/ mo per unit</span></div>
-    </div>
-
-  </div>
-</section>
+<!-- SERVICES MOVED TO HERO -->
 
 <!-- TESTIMONIALS -->
 <section class="section testimonials" id="testimonials">
@@ -1153,48 +1161,21 @@
 <!-- PLANS -->
 <section class="section plans" id="plans">
   <div class="section-eyebrow">Maintenance Plans</div>
-  <div class="section-title">Choose Your Plan</div>
-  <div class="plans-grid">
+  <div class="section-title">Comprehensive Coverage</div>
+  <div class="plans-grid" style="display:flex; justify-content:center;">
 
-    <div class="plan">
-      <div class="plan-name">Essential</div>
-      <div class="plan-price">$99</div>
+    <div class="plan featured" style="max-width:400px; width:100%;">
+      <div class="plan-badge">All-Inclusive</div>
+      <div class="plan-name">Preventive Maintenance</div>
+      <div class="plan-price">$99.99</div>
       <div class="plan-unit">per unit / month</div>
       <div class="plan-divider"></div>
-      <div class="plan-item">1 PM visit per year</div>
-      <div class="plan-item">48-hr priority scheduling</div>
+      <div class="plan-item">1 Preventive Maintenance visit/month</div>
       <div class="plan-item">10% off repair labor</div>
       <div class="plan-item">Filter check included</div>
+      <div class="plan-item">50% off initial deep clean</div>
       <div class="plan-spacer"></div>
-      <a class="plan-btn" href="#quote">Get a Quote</a>
-    </div>
-
-    <div class="plan featured">
-      <div class="plan-badge">Most Popular</div>
-      <div class="plan-name">Professional</div>
-      <div class="plan-price">$149</div>
-      <div class="plan-unit">per unit / month</div>
-      <div class="plan-divider"></div>
-      <div class="plan-item">2 PM visits per year</div>
-      <div class="plan-item">Same-day priority response</div>
-      <div class="plan-item">20% off repair labor</div>
-      <div class="plan-item">Filter + sanitize included</div>
-      <div class="plan-item">Ice quality cert included</div>
-      <div class="plan-spacer"></div>
-      <a class="plan-btn" href="#quote">Get a Quote</a>
-    </div>
-
-    <div class="plan">
-      <div class="plan-name">Fleet</div>
-      <div class="plan-price">Custom</div>
-      <div class="plan-unit">3+ units / month</div>
-      <div class="plan-divider"></div>
-      <div class="plan-item">Volume pricing</div>
-      <div class="plan-item">Dedicated technician</div>
-      <div class="plan-item">Quarterly PM schedule</div>
-      <div class="plan-item">Monthly service reports</div>
-      <div class="plan-spacer"></div>
-      <a class="plan-btn" href="tel:+12819397182">Call for Pricing</a>
+      <a class="plan-btn" style="background:var(--success);border-color:var(--success);color:var(--white);" href="tel:+12819397182">Call Now</a>
     </div>
 
   </div>
@@ -1331,8 +1312,8 @@
   <h2 class="cta-title">Free Inspection.<br>No Obligation.</h2>
   <p class="cta-sub">Machine down or just overdue for a checkup — we'll come to you, assess everything, and tell you exactly what's needed. No pressure.</p>
   <div class="cta-btns">
-    <a class="cta-btn-dark" href="#quote">Get a Free Quote</a>
-    <a class="cta-btn-outline" href="tel:+12819397182">Call Us</a>
+    <a class="cta-btn-dark" style="background:var(--success);color:var(--white);" href="tel:+12819397182">Call Now</a>
+    <a class="cta-btn-outline" href="#quote">Get a Free Quote</a>
   </div>
 </section>
 
@@ -1349,11 +1330,10 @@
     <a class="footer-link" href="#services">Preventive Maintenance</a>
     <a class="footer-link" href="#services">Deep Clean &amp; Sanitize</a>
     <a class="footer-link" href="#services">Maintenance Contracts</a>
-    <a class="footer-link" href="#services">Installation</a>
   </div>
   <div>
     <div class="footer-col-title">Contact</div>
-    <div class="footer-contact-val"><a href="tel:+12819397182" style="color:inherit;text-decoration:none;">Call Us</a></div>
+    <div class="footer-contact-val"><a href="tel:+12819397182" style="color:inherit;text-decoration:none;">Call Now</a></div>
     <div class="footer-contact-lbl">Call or Text · 7 Days a Week</div>
     <div class="footer-contact-val">northwolfice.com</div>
     <div class="footer-contact-lbl">Website</div>
@@ -1408,7 +1388,6 @@
         <option>Preventive Maintenance</option>
         <option>Deep Clean &amp; Sanitize</option>
         <option>Maintenance Contract</option>
-        <option>Installation</option>
         <option>Other</option>
       </select>
     </div>
@@ -1467,6 +1446,49 @@
       a.style.color = a.getAttribute('href') === '#'+cur ? '#5BB8F5' : '';
     });
   });
+
+  // Odometer Animation
+  const statsBar = document.getElementById('statsBar');
+  const odometers = document.querySelectorAll('.odometer');
+  let hasAnimated = false;
+
+  const animateOdometers = () => {
+    odometers.forEach(el => {
+      const target = parseInt(el.getAttribute('data-target'), 10);
+      const duration = 2000; // ms
+      const startTime = performance.now();
+      
+      const updateNumber = (currentTime) => {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        
+        // Easing function (easeOutExpo)
+        const ease = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+        
+        const current = Math.floor(target * ease);
+        el.innerText = current;
+        
+        if (progress < 1) {
+          requestAnimationFrame(updateNumber);
+        } else {
+          el.innerText = target;
+        }
+      };
+      
+      requestAnimationFrame(updateNumber);
+    });
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting && !hasAnimated) {
+      hasAnimated = true;
+      animateOdometers();
+    }
+  }, { threshold: 0.2 });
+
+  if (statsBar) {
+    observer.observe(statsBar);
+  }
 </script>
 
 </body>
