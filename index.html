@@ -329,7 +329,7 @@
   .stats-bar {
     background: var(--ice);
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
   .stat-item {
     padding: 20px;
@@ -952,7 +952,6 @@
 
     /* Area */
     .area { grid-template-columns: 1fr; padding: 48px 24px; }
-    .map-card { display: none; }
 
     /* Booking */
     .booking-section { padding: 48px 24px; }
@@ -1072,10 +1071,6 @@
       <div class="urgency-dot"></div>
       Now accepting new commercial accounts · 4-hr response guaranteed
     </div>
-    <div class="hero-rating">
-      <span class="stars">★★★★★</span>
-      <span class="rating-text"><strong>5.0 Google Rating</strong> · Based on 120+ reviews</span>
-    </div>
     <div class="hero-actions">
       <a class="btn-primary" style="background:var(--success);color:var(--white);" href="tel:+18326161387">Call Now</a>
       <a class="btn-secondary" href="#quote">Get a Free Quote</a>
@@ -1129,46 +1124,12 @@
 
 <!-- STATS BAR -->
 <div class="stats-bar" id="statsBar">
-  <div class="stat-item"><div class="stat-n"><span class="odometer" data-target="500">0</span>+</div><div class="stat-l">Machines Serviced</div></div>
+  <div class="stat-item"><div class="stat-n"><span class="odometer" data-target="150">0</span>+</div><div class="stat-l">Machines Serviced</div></div>
   <div class="stat-item"><div class="stat-n"><span class="odometer" data-target="4">0</span>hr</div><div class="stat-l">Avg. Response Time</div></div>
   <div class="stat-item"><div class="stat-n"><span class="odometer" data-target="98">0</span>%</div><div class="stat-l">Same-Visit Fix Rate</div></div>
-  <div class="stat-item"><div class="stat-n"><span class="odometer" data-target="5">0</span>★</div><div class="stat-l">Google Rating</div></div>
 </div>
 
 <!-- SERVICES MOVED TO HERO -->
-
-<!-- TESTIMONIALS -->
-<section class="section testimonials" id="testimonials">
-  <div class="section-eyebrow">Client Reviews</div>
-  <div class="section-title">What Our Clients Say</div>
-  <div class="testi-grid">
-
-    <div class="testi-card">
-      <div class="testi-stars">★★★★★</div>
-      <p class="testi-quote">"Our ice machine went down on a Friday night. North Wolf had a tech on-site within 3 hours and fixed it the same visit. Saved our entire weekend service. These guys are the real deal."</p>
-      <div class="testi-divider"></div>
-      <div class="testi-name">— David M.</div>
-      <div class="testi-biz">Restaurant Owner · The Woodlands, TX</div>
-    </div>
-
-    <div class="testi-card">
-      <div class="testi-stars">★★★★★</div>
-      <p class="testi-quote">"We've been on their maintenance contract for 6 months. Zero unexpected breakdowns since. The health department inspection was the smoothest it's ever been — ice quality cert was ready to go."</p>
-      <div class="testi-divider"></div>
-      <div class="testi-name">— Sarah T.</div>
-      <div class="testi-biz">Hotel F&amp;B Manager · Conroe, TX</div>
-    </div>
-
-    <div class="testi-card">
-      <div class="testi-stars">★★★★★</div>
-      <p class="testi-quote">"Honest pricing, no upsells, showed up when they said they would. Diagnosed a refrigerant issue two other companies had missed. North Wolf is the only number I'm calling from now on."</p>
-      <div class="testi-divider"></div>
-      <div class="testi-name">— Mark R.</div>
-      <div class="testi-biz">Bar Owner · Spring, TX</div>
-    </div>
-
-  </div>
-</section>
 
 <!-- PLANS -->
 <section class="section plans" id="plans">
@@ -1180,7 +1141,7 @@
       <div class="plan-badge">All-Inclusive</div>
       <div class="plan-name">Preventive Maintenance</div>
       <div class="plan-price">$99.99</div>
-      <div class="plan-unit">per unit / month</div>
+      <div class="plan-unit">per unit / month<br><span style="font-size: 0.85em; opacity: 0.8; font-weight: normal; margin-top: 4px; display: block;">(on a 12-month contract)</span></div>
       <div class="plan-divider"></div>
       <div class="plan-item">1 Preventive Maintenance visit/month</div>
       <div class="plan-item">10% off repair labor</div>
@@ -1306,15 +1267,14 @@
       <span class="area-tag">Kingwood</span>
     </div>
   </div>
-  <div class="map-card">
-    <svg width="48" height="56" viewBox="0 0 48 56" fill="none">
-      <circle cx="24" cy="22" r="16" fill="#1D4E7A" stroke="#5BB8F5" stroke-width="2"/>
-      <circle cx="24" cy="22" r="7" fill="#5BB8F5"/>
-      <path d="M24 38 L24 52" stroke="#5BB8F5" stroke-width="3" stroke-linecap="round"/>
-      <ellipse cx="24" cy="52" rx="9" ry="2.5" fill="#1D4E7A" opacity="0.4"/>
-    </svg>
-    <div class="map-card-label">The Woodlands, TX</div>
-    <div class="map-card-sub">Montgomery &amp; Harris Counties</div>
+  <div class="map-card" style="position: relative; padding: 0; overflow: hidden; display: block; border: none; background: transparent; height: 350px; border-radius: 12px;">
+    <iframe 
+      src="https://www.google.com/maps/d/u/0/embed?mid=1NdzQn8q5hTNFGiwYAOmTxEFWOc4oWA4&ehbc=2E312F&noprof=1" 
+      style="position: absolute; top: -55px; left: 0; border: 0; width: 100%; height: calc(100% + 55px);" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
   </div>
 </section>
 
@@ -1349,7 +1309,7 @@
     <div class="footer-contact-lbl">Call or Text · 7 Days a Week</div>
     <div class="footer-contact-val">northwolfice.com</div>
     <div class="footer-contact-lbl">Website</div>
-    <div class="footer-contact-val">service@northwolfice.com</div>
+    <div class="footer-contact-val">northwolfice.usa@gmail.com</div>
     <div class="footer-contact-lbl">Email</div>
   </div>
 </footer>
